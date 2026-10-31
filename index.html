@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiremate - Job Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">Hire<span>mate</span></div>
+    <nav>
+      <a href="#jobs" class="nav-jobs">Find Jobs</a>
+      <a href="#recruiter" class="nav-rec">Recruiter Dashboard</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= CANDIDATE VIEW ================= -->
+    <section id="jobs">
+      <div class="card filters">
+        <input type="search" placeholder="Search title, company or skill...">
+        <select><option>All locations</option><option>Noida</option><option>Delhi</option></select>
+        <select><option>All types</option><option>Full-time</option><option>Internship</option></select>
+      </div>
+
+      <div class="grid">
+        <article class="card job-card">
+          <h4>Frontend Developer</h4>
+          <div class="company">PixelWorks</div>
+          <div class="meta">Noida &middot; Full-time &middot; 1+ yrs</div>
+          <p>Build responsive user interfaces and reusable components for our web products.</p>
+          <div>
+            <span class="tag">html</span><span class="tag">css</span>
+            <span class="tag">javascript</span><span class="tag">git</span>
+          </div>
+          <a class="btn" href="#job-1">View &amp; Apply</a>
+        </article>
+
+        <article class="card job-card">
+          <h4>Data Analyst Intern</h4>
+          <div class="company">InsightLabs</div>
+          <div class="meta">Delhi &middot; Internship &middot; 0+ yrs</div>
+          <p>Clean datasets, build dashboards and present insights to business teams.</p>
+          <div>
+            <span class="tag">python</span><span class="tag">sql</span><span class="tag">excel</span>
+          </div>
+          <a class="btn" href="#job-2">View &amp; Apply</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= RECRUITER VIEW ================= -->
+    <section id="recruiter">
+      <div class="card">
+        <label>Selected job
+          <select><option>Frontend Developer - PixelWorks</option></select>
+        </label>
+      </div>
+
+      <div class="rec-layout">
+
+        <!-- ranked candidates -->
+        <div class="card">
+          <h3>Ranked candidates <small>(3)</small></h3>
+
+          <a class="cand" href="#c1">
+            <span class="rank">1</span>
+            <span class="info"><strong>Aman Verma</strong><em>aman@mail.com &middot; 2 yrs</em></span>
+            <span class="score-pill">100%</span>
+          </a>
+          <a class="cand" href="#c2">
+            <span class="rank">2</span>
+            <span class="info"><strong>Neha Singh</strong><em>neha@mail.com &middot; 1 yr</em></span>
+            <span class="score-pill">60%</span>
+          </a>
+          <a class="cand" href="#c3">
+            <span class="rank">3</span>
+            <span class="info"><strong>Rahul Mehta</strong><em>rahul@mail.com &middot; 0 yrs</em></span>
+            <span class="score-pill">30%</span>
+          </a>
+        </div>
+
+        <!-- score breakdown panels -->
+        <div class="card">
+          <h3>Score breakdown</h3>
+          <p class="placeholder">Click a candidate to see how the score was built.</p>
+
+          <!-- Aman -->
+          <div class="detail" id="c1">
+            <div class="big-score">100<small>/100</small><span>Aman Verma &middot; overall match</span></div>
+
+            <div class="comp">
+              <div class="comp-head"><span>Required skills</span><span>60 / 60 pts</span></div>
+              <div class="bar"><div class="fill" style="--w:100%"></div></div>
+              <p class="note">4 of 4 required skills found</p>
+              <span class="tag good">html</span><span class="tag good">css</span>
+              <span class="tag good">javascript</span><span class="tag good">git</span>
+            </div>
+            <div class="comp">
+              <div class="comp-head"><span>Bonus keywords</span><span>25 / 25 pts</span></div>
+              <div class="bar"><div class="fill alt" style="--w:100%"></div></div>
+              <p class="note">4 of 4 keywords found</p>
+              <span class="tag good">responsive</span><span class="tag good">react</span>
+              <span class="tag good">accessibility</span><span class="tag good">rest api</span>
+            </div>
+            <div class="comp">
+              <div class="comp-head"><span>Experience</span><span>15 / 15 pts</span></div>
+              <div class="bar"><div class="fill warm" style="--w:100%"></div></div>
+              <p class="note">2 yrs vs 1 yr required</p>
+            </div>
+          </div>
+
+          <!-- Neha -->
+          <div class="detail" id="c2">
+            <div class="big-score">60<small>/100</small><span>Neha Singh &middot; overall match</span></div>
+
+            <div class="comp">
+              <div class="comp-head"><span>Required skills</span><span>45 / 60 pts</span></div>
+              <div class="bar"><div class="fill" style="--w:75%"></div></div>
+              <p class="note">3 of 4 required skills found</p>
+              <span class="tag good">html</span><span class="tag good">css</span>
+              <span class="tag good">javascript</span><span class="tag bad">git</span>
+            </div>
+            <div class="comp">
+              <div class="comp-head"><span>Bonus keywords</span><span>0 / 25 pts</span></div>
+              <div class="bar"><div class="fill alt" style="--w:0%"></div></div>
+              <p class="note">0 of 4 keywords found</p>
+              <span class="tag bad">responsive</span><span class="tag bad">react</span>
+              <span class="tag bad">accessibility</span><span class="tag bad">rest api</span>
+            </div>
+            <div class="comp">
+              <div class="comp-head"><span>Experience</span><span>15 / 15 pts</span></div>
+              <div class="bar"><div class="fill warm" style="--w:100%"></div></div>
+              <p class="note">1 yr vs 1 yr required</p>
+            </div>
+          </div>
+
+          <!-- Rahul -->
+          <div class="detail" id="c3">
+            <div class="big-score">30<small>/100</small><span>Rahul Mehta &middot; overall match</span></div>
+
+            <div class="comp">
+              <div class="comp-head"><span>Required skills</span><span>30 / 60 pts</span></div>
+              <div class="bar"><div class="fill" style="--w:50%"></div></div>
+              <p class="note">2 of 4 required skills found</p>
+              <span class="tag good">html</span><span class="tag good">git</span>
+              <span class="tag bad">css</span><span class="tag bad">javascript</span>
+            </div>
+            <div class="comp">
+              <div class="comp-head"><span>Bonus keywords</span><span>0 / 25 pts</span></div>
+              <div class="bar"><div class="fill alt" style="--w:0%"></div></div>
+              <p class="note">0 of 4 keywords found</p>
+              <span class="tag bad">responsive</span><span class="tag bad">react</span>
+              <span class="tag bad">accessibility</span><span class="tag bad">rest api</span>
+            </div>
+            <div class="comp">
+              <div class="comp-head"><span>Experience</span><span>0 / 15 pts</span></div>
+              <div class="bar"><div class="fill warm" style="--w:0%"></div></div>
+              <p class="note">0 yrs vs 1 yr required</p>
+            </div>
+          </div>
+
+          <p class="formula">Score = Required skills (60) + Bonus keywords (25) + Experience (15).
+            Green = found in resume, red = missing.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= JOB DETAILS + APPLY POPUPS ================= -->
+  <div class="modal" id="job-1">
+    <div class="modal-box">
+      <a class="close" href="#jobs">&times;</a>
+      <h2>Frontend Developer</h2>
+      <div class="company">PixelWorks</div>
+      <p class="meta">Noida &middot; Full-time &middot; Minimum experience: 1 yr</p>
+      <p>Build responsive user interfaces and reusable components for our web products.</p>
+      <strong>Required skills</strong>
+      <div><span class="tag">html</span><span class="tag">css</span><span class="tag">javascript</span><span class="tag">git</span></div>
+      <strong>Nice to have</strong>
+      <div><span class="tag">responsive</span><span class="tag">react</span><span class="tag">accessibility</span><span class="tag">rest api</span></div>
+      <hr>
+      <form action="#jobs">
+        <h3>Apply for this job</h3>
+        <div class="row">
+          <label>Full name<input name="name" required></label>
+          <label>Email<input name="email" type="email" required></label>
+          <label>Experience (years)<input name="exp" type="number" min="0" value="0"></label>
+        </div>
+        <label>Your skills (comma separated)<input name="skills" placeholder="html, css, javascript"></label>
+        <label>Resume text<textarea name="resume" rows="5" placeholder="Paste your resume text here"></textarea></label>
+        <button class="btn" type="submit">Submit application</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="job-2">
+    <div class="modal-box">
+      <a class="close" href="#jobs">&times;</a>
+      <h2>Data Analyst Intern</h2>
+      <div class="company">InsightLabs</div>
+      <p class="meta">Delhi &middot; Internship &middot; Minimum experience: 0 yrs</p>
+      <p>Clean datasets, build dashboards and present insights to business teams.</p>
+      <strong>Required skills</strong>
+      <div><span class="tag">python</span><span class="tag">sql</span><span class="tag">excel</span></div>
+      <strong>Nice to have</strong>
+      <div><span class="tag">pandas</span><span class="tag">power bi</span><span class="tag">statistics</span></div>
+      <hr>
+      <form action="#jobs">
+        <h3>Apply for this job</h3>
+        <div class="row">
+          <label>Full name<input name="name" required></label>
+          <label>Email<input name="email" type="email" required></label>
+          <label>Experience (years)<input name="exp" type="number" min="0" value="0"></label>
+        </div>
+        <label>Your skills (comma separated)<input name="skills" placeholder="python, sql, excel"></label>
+        <label>Resume text<textarea name="resume" rows="5" placeholder="Paste your resume text here"></textarea></label>
+        <button class="btn" type="submit">Submit application</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
